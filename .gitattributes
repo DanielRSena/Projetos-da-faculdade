@@ -1,2 +1,5 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+#include <stdio.h>
+main ()
+{
+    printf("\n  Palavras teste em 3, 2, 1...");
+}
