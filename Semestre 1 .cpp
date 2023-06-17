@@ -1,21 +1,10 @@
-#include <stdio.h>;
+#include <stdio.h>
+#include <math.h>
 int main()
 
-{
-s, dias, idade;
-printf (" Digite o ano atual: ");
-scanf ("%i", &aa);
-printf (" Digite o ano de nascimento:");
-scanf ("%i", &an);
-idade = aa - an;
-meses = idade * 12;
-dias = meses * 30;
-printf (" Logo, vc tem %i anos = %i meses = %i dias", idade, meses, dias);
-}
 
-
-x1 e x2 de baskara
-/*{	
+//	1.	x1 e x2 de baskara (desatualizada, sem do...while ou repetição da conta)
+/*{
 float a, b, c, d, x1, x2;
 printf("\nAgora eu vou calcular o x1 e x2 da equaï¿½ao de 2 grau para vc. Fala o 'a' primeiro: ");
 scanf("%f", &a);
@@ -24,9 +13,9 @@ else
 {
 printf("\nAgora o 'b': ");
 scanf("%f", &b);
-printf("\nSo falta o 'c'': ");
+printf("\nSo falta o 'c': ");
 scanf("%f", &c);
-d = (b * b - 4 * a * c);
+d = (b * b) - (4 * a * c);
 if (d < 0) printf("\nDeixa quieto, raiz quadrada de %.2f eh moh rolo", d);
 else
 {
@@ -38,98 +27,27 @@ else
 	}
 	else
 	{
-x1 = (- b + d) / (2 * a) ;
-x2 = (- b - d) / (2 * a) ;
+x1 = (- b + d) / (2 * a);
+x2 = (- b - d) / (2 * a);
 printf("\n O x1 vale %.2f e o x2 vale %.2f", x1, x2);
 }}}
 }*/
 
 
-//programa que reprova ou anota pelas faltas 
+//	2.	Quadrado perfeito, que é um numero que pode é um produto de outro numero elevado à 2
 /*{
-float total, aulas, faltas; 
-printf("\nDigite o numero de aulas dadas: "); 
-scanf("%f", &aulas); 
-printf ("\nE em quantas aulas vc foi? "); 
-scanf("%f", &faltas); 
-total = faltas / aulas; 
-if (total < 0.25) printf ("\nPelas faltas, vc foi reprovado"); 
-else printf ("\nSe for so pelas faltas, vc passou"); 
+float num, qua;
+int nan;
+printf("\nDigite um numero para saber se eh um quadrado perfeito: "); scanf("%f", &num);
+if (num < 0) num = num * (-1);
+qua = sqrt (num);
+nan = qua;
+if (nan == qua) printf ("\nBoa!! Ele eh um quadrado perfeito pois %.2f elevado ao quadrado eh %.2f! ", qua, num);
+else printf("\nSInto muito, %.2f nao eh um quadrado perfeito. ", num);
 }*/
 
 
-//saber se o numero eh impar ou par
-/*{ 
-int num, d; 
-printf ("\nDigite um numero e eu vou falar se eh impar ou par: "); 
-scanf ("%i", &num); 
-d = num % 2 ; 
-if ( d == 0) printf ("\nO numero %i eh par", num); 
-else 
-printf("\nO numero %i eh impar", num); 
-}*/
- 
-
-//como saber se eh positivo ou negativo
-/*{ 
-float num; 
-printf("\nDigite um numero e vou falar se eh positivo ou negativo "); 
-scanf("%f", &num); 
-if (num > 0 ) printf("\nO numero %.2f eh positivo ", num); 
-else 
-{ 
-if (num == 0 ) printf ("\nEh uma boa pergunta. O 0 eh o que?"); 
-else printf ("\nO nï¿½mero %.2f eh negativo ", num); 
-} 
-}*/
-
-
-//ordem crescente de 3 numeros
-/*{
-int n1, n2, n3;
-printf("\nVou falar a ordem crescente de tres numeros. Fala o primeiro ai: ");
-scanf("%i", &n1);
-printf("\nFala o segundo ai: ");
-scanf("%i", &n2);
-printf("\nFala o terceiro ai: ");
-scanf("%i", &n3);
-if (n3 > n2 && n2 > n1) printf("\n	%i, %i, %i.", n1, n2, n3);
-else {
-if (n2 > n3 && n3 > n1) printf("\n	%i, %i, %i.", n1, n3, n2);
-/else {
-if (n3 > n1 && n1 > n2) printf("\n	%i, %i, %i.", n2, n1, n3);
-else {
-if (n1 > n3 && n3 > n2) printf("\n	%i, %i, %i.", n2, n3, n1);
-else {
-if (n2 > n1 && n1 > n3) printf("\n	%i, %i, %i.", n3, n1, n2);
-else printf("\n	%i, %i, %i.", n3, n2, n1);
-}}}}
-}*/
-
-//quadrado perfeito
-//{
-//float num, qua;
-//int nan;
-//printf("\nDigite um numero para saber se eh um quadrado perfeito: "); scanf("%f", &num);
-//if (num < 0) num = num * (-1);
-//qua = sqrt (num);
-//nan = qua;
-//if (nan == qua) printf ("\nBoa!! Ele eh um quadrado perfeito pois %.2f elevado ao quadrado eh %.2f! ", qua, num);
-//else printf("\nNao mano, %.2f nao eh um quadrado perfeito. ", num);
-//}
-
-
-//numero invertido
-//{
-//int num, inv;
-//printf("\nFala o numero pra inverter, patrao: ");
-//scanf("%i", &num);
-//inv = (num % 10) * 10 + (num / 10);
-//printf("\n o numero %i invertido eh %i.", num, inv);
-//}
-
-
-//caixa eletronico
+//	3.	Caixa eletronico
 /*{
 int valor, n1, n2, n5, n10, n20, n50, n100, n200;
 printf("\nQual eh o valor para o valor patrao? ");
@@ -146,79 +64,20 @@ printf("\nNotas de 200 reais: %i\nNotas de 100: %i\nNotas de 50: %i\nNotas de 20
 }*/
 
 
-//situaï¿½ï¿½o do aluno
-//{
-//float n1, n2, media;
-//printf("\n	Salve, fala a n1: "); scanf("%f", &n1);
-//printf("\n	Agora fala a n2: "); scanf("%f", &n2);
-//media = (n1 + n2) / 2;
-//if (n1 && n2 >= 6 || media >= 6) printf("\n	Ufa, com a media %.2f, vc se salvou dessa vez", media);
-//else if(media < 3) printf("\n	Escapou nao mano, com media %.2f, ano que vem vc tah na mesma sala", media);
-//else printf("\n	Com media %.2f, soh o exame te salva", media);
-//}
+//	4.	Aumento do salario com base no tempo de casa
+/*{
+printf("\n	Qual eh o seu salario? "); scanf("%f", &sal);
+printf("\n	E o seu tempo de casa, em anos? "); scanf("%f", &tempo);
+if (tempo > 20) sal = sal * 1.25; //se o cara tem mais de 20 anos de empresa, o aumento eh de 25%
+if (tempo > 10 && tempo <= 20) sal = sal * 1.2; // se o cara tem + de 10 e - ou = a 20, aumento de 20%
+if (tempo >= 5 && tempo <= 10) sal = sal * 1.1; //entre 5 e 10 anos? 10%
+if (tempo < 5) sal = sal * 1.05; //menos de 5 anos? 5% de aumento
+printf("\n	Entao seu salario com aumento eh de RS %.2f reais. ", sal);//podemos seguir uma ordem diferente, e usar o else para t>20
+}*/
 
 
-//aumento do salario com base no tempo de casa
-//{
-//printf("\n	Qual eh o seu salario? "); scanf("%f", &sal);
-//printf("\n	E o seu tempo de casa, em anos? "); scanf("%f", &tempo);
-//if (tempo > 20) sal = sal * 1.25; //se o cara tem mais de 20 anos de empresa, o aumento eh de 25%
-//if (tempo > 10 && tempo <= 20) sal = sal * 1.2; // se o cara tem + de 10 atï¿½ 20, aumento de 20%
-//if (tempo >= 5 && tempo <= 10) sal = sal * 1.1; //entre 5 e 10 anos? 10%
-//if (tempo < 5) sal = sal * 1.05; //menos de 5 anos? Entï¿½o tem 5% de aumento
-//printf("\n	Entao seu salario com aumento eh de RS %.2f reais. ", sal);//podemos seguir uma ordem diferente, e usar o else para t>20
-//}
-
-
-//{
-//float prato, valor, valorf, valorp, sobremesa;
-//printf("\n	Escolha um valor para comeï¿½ar: "); scanf("%f", &valor);
-//printf("\n		Cardapio\n1. Peixe\n2. Carne bovina\n3. Frango\n4. Vegetariano");
-//printf("\n\n	Digite 1, 2, 3 ou 4 pro prato que deseja: "); scanf ("%f", &prato);
-//if (valor == 1) valorp = valor * 1.1;
-//else if (valor == 2) valorp = valor * 1.2;
-//else if (valor == 3) valorp = valor * 1.15;
-//else valorp = valor * 1.05;
-//printf("\nE sobremesa, voce quer? Digite 1 para sim ou 0 para nao: "); scanf("%f", &sobremesa);
-//if (sobremesa == 1) valor = valor * 0.05;
-//valorf = valor + valorp;
-//printf("\n	O valor do prato: %.2f\n	Valor da sobremesa: %.2f\n	Valor total: %.2f", valorp, valor, valorf); 
-//}
-
-
-//teste de poligono
-//{
-//int l;
-//printf("\n	Fala meu bom!Quantos lados tem a forma? "); scanf("%i", &l);
-//if (l <0) printf("\n	O que isso significa?\n");
-//else if (l == 0) printf("\n	Um circulo, talvez?\n");
-//else if (l > 0 && l<= 2) printf("\n	Nao eh um poligono\n");
-//else if (l == 3) printf("\n	Parabens, isso eh um triangulo!\n");
-//else if (l == 4) printf("\n 	Ado, aado sua forma eh um quadrado\n");
-//else if (l == 5) printf ("\n	Vamos lah no PENTAGONO\n");
-//else if (l == 6) printf ("\n	Temos um hexagono, o que nem os BR tem\n");
-//else printf("\n	Calma lah, isso eh mais do que eu consigo\n");
-//}
-
-
-//valor dos livros
-//{
-//float valor, cod;
-//printf("\n	Coloque o cod. do livro: "); scanf("%f", &cod);
-//if (cod < 1) printf("\n	Erro! reinicie o programa e insira um codigo valido");
-//else if (cod >= 1 && cod <= 30) 
-//{ valor = 80  * 0.94; printf("\n	Genero: Suspense\n	Valor: %.2f\n", valor); }
-//else if (cod >= 31 && cod <= 45) 
-//{ valor = 80  * 0.92; printf("\n	Genero: Terror\n	Valor: %.2f\n", valor); }
-//else if (cod >= 46 && cod <= 60) 
-//{ valor = 80  * 0.88; printf("\n	Genero: Biografia\n	Valor: %.2f\n", valor); }
-//else
-//{ valor = 80  * 0.85; printf("\n	Genero: Didatico\n	Valor: %.2f\n", valor); }
-//}
-
-
-//Imc mais completo
-{
+//	5.	Imc
+/*{
 float h, p, imc;
 do{
 	printf("\n	Boa? vamos calcular e classificar seu IMC. Primeiro, coloque o peso: "); scanf("%f", &p);
@@ -235,22 +94,11 @@ else if (imc < 25) printf("\n	Seu imc eh de de %.2f, ou normal. Tudo tranquilo p
 else if (imc < 30) printf ("\n	Seu IMC eh de %.2f, ou sobrepeso. Um pouco acima do normal, mas nada pra se preocupar (por enquanto)\n", imc);
 else if (imc < 35) printf("\n	Seu imc eh de de %.2f, ou obesidade leve. Talvez uns exercicios seriam interessantes\n", imc);
 else if (imc < 40) printf ("\n	Seu IMC eh de %.2f, ou obesidade moderada. talvez sua locomocao e saude nao devem estar tao legais.\n", imc);
-else printf("\n	Seu imc eh de de %.2f, ou obesidade morbida. Jah pensou em gravar para os quilos mortais?\n", imc);
+else printf("\n	Seu imc eh de de %.2f, ou obesidade morbida.\n", imc);
 }
 
 
-//dois numeros, maiores, menores ou iguais
-//{
-//int n1, n2;
-//printf("\n	Digite dois numeros, e vou falar se sao iguais, menores ou maiores. Coloque o primeiro: "); scanf("%i", &n1);
-//printf("\n	Digite o segundo numero: "); scanf("%i", &n2);
-//if (n1 == n2) printf("\n	Os dois sao iguais. Ambos sao %i\n", n1);
-//else if (n1 > n2) printf("\n	O numero %i eh maior que o %i\n", n1, n2);
-//else printf("\n	O numero %i eh maior que %i\n", n2, n1);
-//}
-
-
-//calculadora simples
+//	6.	Calculadora simples
 //{
 //float n1, n2, resultado;
 //int op;
@@ -267,16 +115,7 @@ else printf("\n	Seu imc eh de de %.2f, ou obesidade morbida. Jah pensou em grava
 //}
 
 
-//ano bissexto com condicionais
-//{
-//int ano;
-//printf("\n	Digite o ano e vou falar se ele eh bissexto: "); scanf("%i", &ano);
-//if ((ano % 4 == 0 && ano % 100 != 1) || (ano % 4 == 0 && ano % 100 != 0 && ano % 400 == 0) printf("\n	Boa mano, %i eh bissexto", ano);
-//else printf("\n	O ano %i nao eh bissexto", ano);
-//}
-
-
-//descobrir se tres medidas formam um triangulo
+//	7.	Descobrir se tres medidas formam um triangulo
 //{
 //float a, b, c;
 //printf("\n	Fala a medida do lado 1: "); scanf("%f", &a);
@@ -289,7 +128,7 @@ else printf("\n	Seu imc eh de de %.2f, ou obesidade morbida. Jah pensou em grava
 //}
 
 
-//novas situaï¿½ï¿½es de um novo aluno
+//	8.	Situações de um aluno
 //{
 //float qa, n1, n2, m, p;
 //const float a = 80;
@@ -307,7 +146,7 @@ else printf("\n	Seu imc eh de de %.2f, ou obesidade morbida. Jah pensou em grava
 //}}
 
 
-//verificar se tres angulos podem ser de um triangulo
+//	9.	Verificar se tres angulos podem ser de um triangulo
 //{
 //float a1, a2, a3;
 //printf("\n	Fala a medida do angulo 1: "); scanf("%f", &a1);
@@ -320,7 +159,7 @@ else printf("\n	Seu imc eh de de %.2f, ou obesidade morbida. Jah pensou em grava
 //}
 
 
-//	Qtd numeros divisiveis por x entre a e b (b > a)
+//	10	Qtd numeros divisiveis por x entre a e b (b > a)
 /*{
 	int a, b, x;
 	do {
@@ -339,7 +178,7 @@ else printf("\n	Seu imc eh de de %.2f, ou obesidade morbida. Jah pensou em grava
 	}*/
 	
 	
-//anos bissextos em intervalos de outros dois
+//	11.	Anos bissextos em intervalos de outros dois
 /*{
 			int a1, a2;
 	do {
@@ -357,7 +196,7 @@ else printf("\n	Seu imc eh de de %.2f, ou obesidade morbida. Jah pensou em grava
 	}*/
 	
 	
-//registro e media de precos de n produtos
+//	12.	Registro e media de precos de n produtos
 /*{
 	float v, vt, media;
 	const int k = 3;
@@ -373,58 +212,7 @@ else printf("\n	Seu imc eh de de %.2f, ou obesidade morbida. Jah pensou em grava
 }*/
 
 
-//soma de numeros impares de 1 ate x
-/*{
-	int x, a = 1, t;
-	do
-	{
-		printf("\n	Coloca um numero para eu te falar quais numeros impares estao entre 1 e o numero que voce escolher: "); scanf("%d", &x);
-		if (x <= 0) printf("\n	O seu numero precisa ser maior que 0, entao esse aqui nao dah.");
-	} while (x <= 0);
-	printf("\n	");
-	while (a <= x)
-	{
-		if (a % 2 != 0) printf ("%i ", a);
-		t = t + a;
-		a = a + 1;
-	}
-	printf("\n\n");
-}*/
-
-
-//tabuada atï¿½ 10
- /*{
-  int tb, nb, cont = 0;
-  do {
-  	printf("\n	Coloca o numero base da tabuada: "); scanf("%i", &nb);
-  	printf("\n	Coloca ate onde vc quer que a tabuada vah: "); scanf("%i", &tb);
-  	if (nb <= 0 || tb <= 0) printf("\n	Ainda nao consigo esse tipo de conta, foi mal");
-	 } while (nb <= 0 || tb <= 0);
-	 printf("\n");
-	 while (cont <= tb) {
-	 	printf("	%i	x	%i	=	%i\n", nb, cont, nb*cont);
-	 	cont = cont + 1;
-	 }
-  }*/
-  
-  
-  //tabuada atï¿½ 10 ao contrario
-/*{
-  int tb, nb;
-  do {
-  	printf("\n	Coloca o numero base da tabuada: "); scanf("%i", &nb);
-  	printf("\n	Coloca ate onde vc quer que a tabuada vah: "); scanf("%i", &tb);
-  	if (nb <= 0 || tb <= 0) printf("\n	Ainda nao consigo esse tipo de conta, foi mal");
-	 } while (nb <= 0 || tb <= 0);
-	 printf("\n");
-	 while (0 <= tb) {
-	 	printf("	%i	x	%i	=	%i\n", nb, tb, nb*tb);
-	 	tb = tb - 1;
-	 }
-}*/
-
-
-//lugares de onibus, viagens
+//	13.	Lugares de onibus, viagens
 /*{
 	int lugares, idade, cont = 1; 
 	float cmin, pa = 0, pb = 0, pc = 0, pd = 0, pt = 0; 
@@ -455,26 +243,7 @@ else printf("\n	Seu imc eh de de %.2f, ou obesidade morbida. Jah pensou em grava
 }*/
 
 
-//potencia sem pow
-/*{
-  	int a, b, x = 2, t;
-  	do {
-  		printf("\n	Qual eh o numero que voce quer multiplicar? "); scanf("%i", &a);
-  		if (a <= 0) printf ("\n	Erro! O numero tem que ser positivo.\n");
-  	   } while (a <= 0);
-  	do {
-  		printf("\n	Qual eh o numero que voce quer elevar? "); scanf("%i", &b);
-  		if (b <= 0) printf ("\n	Erro! O numero tem que ser positivo.\n");
-  		} while (b <= 0);
-  		t = a;
-  		while (x <= b) {
-  			t = t * a;
-  			x = x + 1;
-		  }
-		printf ("\n	%d\n\n", t);
-}*/
-
-// essquecemos de alguma coisa coisa no exercicio do pau
+//	14.	Potencia sem função pow
 /*{
 	int a, b, c, p, t = 1, cont = 1;
 	do {
@@ -493,28 +262,7 @@ else printf("\n	Seu imc eh de de %.2f, ou obesidade morbida. Jah pensou em grava
 }*/
 	
 
-//o numero eh primo //
-/*{
-  	int n, quo = 2, ds;
-  	do {
-  		printf("\n	Coloque um numero para eu informar se eh primo ou nao: "); scanf("%i", &n);
-  		if (n <= 0) printf("\n	Erro! O numero tem que ser positivo.\n\n");
-	   } while (n <= 0);
-	  if (n % 2 == 0) printf ("\n	O numero %d eh par e diferente de dois, portanto nao eh primo.\n\n", n);
-	  else
-	  	  {
-	  		ds = n - 2;
-		  	while (quo != 1 || n % ds == 1) 
-		  		{
-		  		n = n / ds;
-		 		ds = ds - 2;
-		 		if (n % quo == 1) printf("\n	O numero nao eh primo.\n\n");
-		 		}
-		 printf("\n	O numero eh primo.\n\n");
-	  	  }
-}*/
-
-//novos numeros primos
+//	15.	Numeros primos
 /*{
 	int n, cont = 2, p;
 	do {
@@ -537,29 +285,8 @@ else printf("\n	Seu imc eh de de %.2f, ou obesidade morbida. Jah pensou em grava
 }*/
 	
 
-
-//MDC euclides
+//	16.	MDC segundo euclides
 /*{
-int rst, a, b;
-do {
-	printf("\n	Coloque o primeiro numero: "); scanf("%d", &a);
-	printf("\n	Coloque o segundo numero: "); scanf("%d", &b);
-	if 	(a >= b) printf("\n	Erro! o segundo numero tem que ser maior que o primeiro!\n\n");
-   } while (a >= b);
-	while(a != 0)
-	{
-		if (a <= b) 
-		{
-			rst = b % a;
-			b = a;
-			a = rst;
-		}	
-	} 
-	printf("\n	O MDC eh %d\n\n", b);
-}*/
-
-//outra forma 
-{
 	int rst, a, b;
 	do {
 		printf("\n	Coloque o primeiro numero: "); scanf("%d", &a);
@@ -577,7 +304,7 @@ do {
 } 
 
 
-/	1. distancia entre n cidades, distancia percorrida tambem incluida
+//	17.	Distancia entre n cidades, distancia percorrida tambem incluida
 /*{
 	int cidades;
 	do {
@@ -600,34 +327,8 @@ do {
 }*/
 
 
-//	2. vendas na semana
-
-/*vetor de 7 posiï¿½ï¿½es para os dias da semana. Assuma que a posiï¿½ï¿½o 0 tem o dado do domingo, etc, atï¿½ o sï¿½bado 6. Cada posiï¿½ï¿½o guarda as qtds vendidas de um produto, que
-serï¿½ dado pelo usuï¿½rio. Calcule o valor das vendas de cada dia, armazenando em um outro vetor. Mostre v1 e v2 e escreva o nome do dia da semana com maior valor de venda.*/
+//	18. Vetor criado pelo usuário, tamanho > 2 e par. Outro vetor guardará a soma de duas posições do primeiro
 /*{
-	int dias[7], cont;
-	float valor, p[7];
-	printf("\n	Qual o valor dos produtos? "); scanf("%f", &valor);
-	for (cont = 0; cont < 7; cont = cont + 1)
-	{
-		printf("\n	Qual o valor dos produtos no dia %d? ", cont); scanf("%f", &p[cont]);
-		p[cont] = p[cont] * valor;
-    }
-    printf("\n\n	Dia 0 = domingo\n\tDia 1 = segunda\n\tDia 2 = terca\n\tDia 3 = quarta\n\tDia 4 = quinta\n\tDia 5 = sexta\n\tDia 6 = sabado\n\t\n	");
-    for (cont = 0; cont < 7; cont = cont + 1)
-    {
-    	printf("Dia %d: ", cont); 
-    	printf("%.2f\n\t", p[cont]);
-	}
-}*/
-
-
-//	3. vetor criado pelo usuï¿½rio 
-
-/*	v1 de tamanho t, t >= 2 e par. Para cada duas posiï¿½ï¿½es, crie uma posiï¿½ï¿½o em um v2 que guardarï¿½ os resultados das 
-somas do v1, dois nï¿½meros de cada vez. No final, exiba os 2 vetores*/
-
-{
 	int t, cont;
 	do { printf("\n	Salve chefia, qual o tamanho do vetor? "); scanf("%d", &t); } while (t < 2 || t % 2 != 0);
 	int v1[t], v2[t / 2];
@@ -639,10 +340,10 @@ somas do v1, dois nï¿½meros de cada vez. No final, exiba os 2 vetores*/
 	printf("\n\n\t");
 	for (cont = 0; cont < t / 2; cont = cont + 1)	printf ("   %d    ", v2[cont]);
 	printf("\n\n");
-}
+}*/
 
 
-//	4. Pede salarios, tal que n > 0 e exibe o maior e menor deles, alï¿½m da mï¿½dia
+//	19. Pede salarios, tal que n > 0 e exibe o maior e menor deles, alem da media
 /*{
 	int n;
 	do {
@@ -664,7 +365,7 @@ somas do v1, dois nï¿½meros de cada vez. No final, exiba os 2 vetores*/
 }*/
 
 
-//	5. cadastra n vetores, sendo que n > 5 e exibe em funï¿½ï¿½o de escada.
+//	20.	Cadastra n vetores, tal que n > 5 e exibe valores em escada.
 /*{
 	int n;
 	do { printf("\n	Salve patrao, qual o numero de vetores de hoje? "); scanf("%i", &n); } while (n <= 5);
@@ -680,45 +381,4 @@ somas do v1, dois nï¿½meros de cada vez. No final, exiba os 2 vetores*/
 		printf("\n\n");
     }
 }*/
-	
-
-//	6. cadastra vetor de tamanho n, com n > 0 e gera outro em forma crescente 
-/*{
-	int n, vmax = 0;
-	do { printf("\n	Salve patrao, qual o numero de vetores de hoje? "); scanf("%i", &n); } while (n < 1);
-	int cont, v1[n], v2[n], aux;
-	for (cont = 0; cont < n; cont = cont + 1)
-	{
-		printf("\n	Qual o valor guardado no vetor %d? ", cont); scanf("%i", &v1[cont]);
-		v2[cont] = v1[cont];
-		if (v2[cont] < v2[cont - 1])
-		{
-			for (cont = cont; cont = 0; cont = cont - 1)
-			{
-				aux = v2[cont - 1];
-				v2[cont - 1] = v2[cont];
-				v2[cont] = aux;
-			}
-		}
-	}	
-	printf("\n\n	"); 
-	for (cont = 0; cont < n; cont = cont + 1) printf ("%d\t", v1[cont]);
-	printf("\n\n	");
-	for (cont = 0; cont < n; cont = cont + 1) printf ("%d\t", v2[cont]);
-	printf("\n\n");
-}*/
-
-
-
-/*int t, i, j;
-for (i=0, j =0; i < t; i = i + 1)
-{p
-printf
-if(i%2!=0)
-{
-	v2[j] = v1[i] + v1[i - 1]; j = j + 1;
-}
-}*/
-	
-
 
