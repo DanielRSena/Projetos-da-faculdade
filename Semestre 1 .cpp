@@ -1,22 +1,8 @@
 #include <stdio.h>
-#include <math.h>
 int main()
 
 
-//	1.	Quadrado perfeito (numero que é um produto de outro numero elevado à 2)
-/*{
-	float num, qua;
-	int nan;
-	printf("\n	Digite um numero para saber se eh um quadrado perfeito: "); scanf("%f", &num);
-	if (num < 0) num = num * (-1);
-	qua = sqrt (num);
-	nan = qua;
-	if (nan == qua) printf ("\n	%.2f eh um quadrado perfeito pois %.2f elevado ao quadrado eh %.2f!\n\n ", num, qua, num);
-	else printf("\n	Sinto muito, %.2f nao eh um quadrado perfeito.\n\n", num);
-}*/
-
-
-//	2.	Caixa eletronico
+//	1.	Caixa eletronico
 /*{
 	int valor, n1, n2, n5, n10, n20, n50, n100, n200;
 	do {
@@ -34,7 +20,7 @@ int main()
 }*/
 
 
-//	3.	Calculadora simples
+//	2.	Calculadora simples
 /*{
 	float n1, n2, resultado;
 	int op, fim = 1;
@@ -58,21 +44,7 @@ int main()
 }*/
 
 
-//	4.	Descobrir se tres medidas formam um triangulo
-/*{
-	float a, b, c;
-	printf("\n\t\t- Programa para classificar triangulos - \n\n");	
-	do { printf("\n\tMedida do lado 1: "); scanf("%f", &a); } while (a <= 0);
-	do { printf("\n\tMedida do lado 2: "); scanf("%f", &b); } while (b <= 0);
-	do { printf("\n\tMedida do lado 3: "); scanf("%f", &c); } while (c <= 0); 
-	if(a >= b + c || c >= a + b || b >= a + c) printf ("\n	Erro! Nenhuma das medidas pode ser maior que a soma das outras duas!\n\n");
-	else if (a == b && b == c) printf("\n	Temos um triangulo equilatero! (tres lados iguais)\n\n");
-	else if (a == b && b != c) printf ("\n	Temos um triangulo isoceles! (dois lados iguais)\n\n");
-	else printf("\n	Temos um triangulo escaleno! (tres lados iguais)\n\n");
-}*/
-
-
-//	5.	Situações de um aluno
+//	3.	Situações de alunos
 /*{
 	int cont, alunos;
 	float aulas;
@@ -97,39 +69,27 @@ int main()
 }*/
 
 
-//	6.	Verificar se tres angulos podem ser de um triangulo
-//{
-//float a1, a2, a3;
-//printf("\n	Fala a medida do angulo 1: "); scanf("%f", &a1);
-//printf("\n	Fala a medida do angulo 2: "); scanf("%f", &a2);
-//printf("\n	Fala a medida do angulo 3: "); scanf("%f", &a3);
-//if ((a1 <=0 || a2 <= 0 || a3 <= 0) || (a1 + a2 + a3 != 180)) printf ("\n	Erro! Os tres angulos somados tem que ser igual a 180 e nenhum pode ser 0 ou negativo!\n");
-//else if (a1 < 90 && a2 < 90 && a3 < 90) printf("\n	Temos um triangulo acutangulo!\n");
-//else if (a1 == 90 || a2 == 90 || a3 == 90) printf("\n	temos um triangulo retangulo!\n");
-//else printf ("\n	Temos um triangulo obstusangulo!\n");
-//}
-
-
-//	10	Qtd numeros divisiveis por x entre a e b (b > a)
+//	4.	Qtd numeros divisiveis por x entre a e b (b > a)
 /*{
 	int a, b, x;
+	printf("\n\t\t- Numeros divisiveis por x entre a e b (b > a) -\n\n");
 	do {
-		printf("\n	Coloca o primeiro numero: "); scanf("%d", &a);
-		printf("\n	Coloca o primeiro numero: "); scanf("%d", &b);
+		printf("\n	Primeiro numero do intervalo: "); scanf("%d", &a);
+		printf("\n	Segundo numero do intervalo: "); scanf("%d", &b);
 		if (a >= b) printf("\n	Erro! o segundo numero tem que ser maior que o primeiro!\n");
 		} while (a >= b);
-	printf("\n	E qual eh o numero que sera o divisor? "); scanf("%i", &x);
-	printf("\n");
+	printf("\n	Qual eh o numero divisor (x)? "); scanf("%i", &x);
+	printf("\n\n\tOs numeros entre %i e %i divisiveis por %i sao: \n\n", a, b, x);
 	while (a <= b)
 	{
 		if (a % x == 0) printf("	%d", a);
 		a = a + 1;
 	}
-	printf("\n");
-	}*/
+	printf("\n\n");
+}*/
 	
 	
-//	11.	Anos bissextos em intervalos de outros dois
+//	5.	Anos bissextos em intervalos de outros dois
 /*{
 			int a1, a2;
 	do {
@@ -145,25 +105,9 @@ int main()
 	}
 	printf("\n");
 	}*/
-	
-	
-//	12.	Registro e media de precos de n produtos
-/*{
-	float v, vt, media;
-	const int k = 3;
-	int cont = 1;
-	while (cont <= k)
-	{
-		printf("\n	Coloque o valor do produto %i: ", cont); scanf("%f", &v);
-		if (v > 150) v = v * 1.05;
-		cont = cont + 1;
-		vt = vt + v;
-	}
-		printf("\n	O valor total eh %.2f, e a media dos valores eh de %.2f\n\n", vt, vt/k);
-}*/
 
 
-//	13.	Lugares de onibus, viagens
+//	6.	Lugares de onibus, viagens
 /*{
 	int lugares, idade, cont = 1; 
 	float cmin, pa = 0, pb = 0, pc = 0, pd = 0, pt = 0; 
@@ -194,68 +138,7 @@ int main()
 }*/
 
 
-//	14.	Potencia sem função pow
-/*{
-	int a, b, c, p, t = 1, cont = 1;
-	do {
-  		printf("\n	Qual eh o numero que voce quer multiplicar? "); scanf("%i", &a);
-  		if (a <= 0) printf ("\n	Erro! O numero tem que ser positivo.\n");
-  	   } while (a <=0);
-  	printf("\n	Qual eh o numero que voce quer elevar? "); scanf("%i", &b);
-  	c = b;
-  	if (b < 0)  b = b * (-1);
-  	while (cont <= b) {
-  			t = t * a;
-  			cont = cont + 1;
-		  }
-	if (c < 0) printf("\nO resultado eh 1/%d\n\n", t);
-	else printf ("\n	O numero eh %d\n\n", t);
-}*/
-	
-
-//	15.	Numeros primos
-/*{
-	int n, cont = 2, p;
-	do {
-  		printf("\n	Coloque um numero para eu informar se eh primo ou nao: "); scanf("%i", &n);
-  		if (n < 0) printf("\n	Erro! O numero tem que ser maior que 2, o primeiro numero primo.\n\n");
-	   } while (n < 0);
-	if (n < 2) p = 0;
-	else p = 1;
-	while ( cont <= sqrt(n))
-		{
-			if (n % cont == 0)	
-			{
-				p = 0;
-				break;
-			}
-			else cont = cont + 1;
-		}
-	if (p == 1) printf ("\n	O numero %d eh primo!\n\n", n);
-	else printf ("\n	O numero %d naoh eh primo.\n\n", n);
-}*/
-	
-
-//	16.	MDC segundo euclides
-/*{
-	int rst, a, b;
-	do {
-		printf("\n	Coloque o primeiro numero: "); scanf("%d", &a);
-		printf("\n	Coloque o segundo numero: "); scanf("%d", &b);
-		if 	(a >= b) printf("\n	Erro! o segundo numero tem que ser maior que o primeiro!\n\n");
-       } while (a > b || a <= 0 || b <= 0);
-    rst = b % a;
-	while (rst != 0)
-	{
-			b = a;
-			a = rst;
-			rst = b % a;
-	} 
-	printf("\n	O MDC eh %d\n\n", b);
-} 
-
-
-//	17.	Distancia entre n cidades, distancia percorrida tambem incluida
+//	7.	Distancia entre n cidades, distancia percorrida tambem incluida
 /*{
 	int cidades;
 	do {
@@ -278,23 +161,27 @@ int main()
 }*/
 
 
-//	18. Vetor criado pelo usuário, tamanho > 2 e par. Outro vetor guardará a soma de duas posições do primeiro
+//	8. Vetor criado pelo usuário, tamanho > 2 e par. Outro vetor guardará a soma de duas posições do primeiro
 /*{
 	int t, cont;
-	do { printf("\n	Salve chefia, qual o tamanho do vetor? "); scanf("%d", &t); } while (t < 2 || t % 2 != 0);
+	printf("\n\t\t- Somador de vetores - \n\n");
+	do { 
+		printf("\n	Qual o tamanho do vetor? "); scanf("%d", &t); 
+		if (t < 2 || t % 2 != 0) printf("\n\tO vetor tem que ser par e maior que 2!\n");
+	   } while (t < 2 || t % 2 != 0);
 	int v1[t], v2[t / 2];
 	for (cont = 0; cont < t; cont = cont + 1)
 	{ printf("\n	Qual o numero que ficara no local %d? ", cont); scanf ("%d", &v1[cont]); }
 	for (cont = 0; cont < t / 2; cont = cont + 1) { v2[cont] = v1[ 2 * cont + 1] + v1[2 * cont]; }
-	printf("\n\n\t");
+	printf("\n\n\t\t");
 	for (cont = 0; cont < t; cont = cont + 1) printf ("%d   ", v1[cont]);
-	printf("\n\n\t");
+	printf("\n\n\t\t");
 	for (cont = 0; cont < t / 2; cont = cont + 1)	printf ("   %d    ", v2[cont]);
 	printf("\n\n");
 }*/
 
 
-//	19. Pede salarios, tal que n > 0 e exibe o maior e menor deles, alem da media
+//	9. Pede salarios, tal que n > 0 e exibe o maior e menor deles, alem da media
 /*{
 	int n;
 	do {
@@ -316,10 +203,14 @@ int main()
 }*/
 
 
-//	20.	Cadastra n vetores, tal que n > 5 e exibe valores em escada.
+//	10.	Cadastra n vetores, tal que n > 5 e exibe valores em escada.
 /*{
 	int n;
-	do { printf("\n	Salve patrao, qual o numero de vetores de hoje? "); scanf("%i", &n); } while (n <= 5);
+	printf("\n\t\t- Vetores em escada -\n\n");
+	do { 
+		printf("\n	Qual o tamanho do vetor? "); scanf("%i", &n); 
+		if (n <= 5) printf("\n	Erro! O tamanho tem que ser maior que 5.");
+	   } while (n <= 5);
 	int cont, v[n];
 	for (cont = 0; cont < n; cont = cont + 1) 
 	{ printf("\n	Qual o valor guardado no vetor %d? ", cont); scanf("%i", &v[cont]); }
