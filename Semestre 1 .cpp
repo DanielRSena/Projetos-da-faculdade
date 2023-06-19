@@ -21,7 +21,7 @@ int main()
 
 
 //	2.	Calculadora simples
-{
+/*{
 	float n1, n2, resultado;
 	int op, fim = 1;
 	printf("\n\t\tBem vindo a minha calculadora simples!\n");
@@ -41,7 +41,7 @@ int main()
 		printf("\n\n	Quer fazer mais uma conta?\n\nDigite 1 para sim\nDigite 2 para nao: "); scanf ("%i", &fim);
 	}
 	printf("\n\n");
-}
+}*/
 
 
 //	3.	Situações de alunos
@@ -107,7 +107,7 @@ int main()
 	}*/
 
 
-//	6.	Lugares de onibus, viagens
+//	6.	Organização de excursões
 /*{
 	int lugares, idade, cont = 1; 
 	float cmin, pa = 0, pb = 0, pc = 0, pd = 0, pt = 0; 
@@ -138,7 +138,7 @@ int main()
 }*/
 
 
-//	7.	Distancia entre n cidades, distancia percorrida tambem incluida
+//	7.	Distancia entre n cidades usando vetores 
 /*{
 	int cidades;
 	do {
