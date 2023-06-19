@@ -45,7 +45,7 @@ int main()
 
 
 //	3.	Situações de alunos
-/*{
+{
 	int cont, alunos;
 	float aulas;
 	printf("\n\t\t- Situacoes dos alunos -\n");
@@ -61,12 +61,12 @@ int main()
 			do { printf("\n	Primeira nota: "); scanf("%f", &n1); } while (n1 < 0 || n1 > 10);
 			do { printf("\n	Segunda nota: ", cont); scanf("%f", &n2); } while (n1 < 0 || n1 > 10);
 			m = (n1 + n2) / 2;
-			if (m >= 6) printf("\n	Media: %f\n\tFrequencia: %.0f%%\n\n\t\t(aprovado)\n\n", m, p);
-			else if (m >= 3) printf("\n	Media: %f\n\tFrequencia: %.0f%%\n\n\t\t(exame)\n\n", m, p);
-			else printf("\n	Media: %f\n\tFrequencia: %.0f%%\n\n\t\t(reprovado)\n\n", m, p);
+			if (m >= 6) printf("\n	Media: %.0f\n\tFrequencia: %.0f%%\n\n\t\t(aprovado)\n\n", m, p);
+			else if (m >= 3) printf("\n	Media: %.0f\n\tFrequencia: %.0f%%\n\n\t\t(exame)\n\n", m, p);
+			else printf("\n	Media: %.0f\n\tFrequencia: %.0f%%\n\n\t\t(reprovado)\n\n", m, p);
 			 }
 	}
-}*/
+}
 
 
 //	4.	Qtd numeros divisiveis por x entre a e b (b > a)
@@ -107,15 +107,16 @@ int main()
 	}*/
 
 
-//	6.	Organização de excursões
+//	6.	Organização de excursões, com todos os lugares ocupados
 /*{
 	int lugares, idade, cont = 1; 
 	float cmin, pa = 0, pb = 0, pc = 0, pd = 0, pt = 0; 
+	printf("\n\t\t- Organizador de lucro em um onibus -\n\n");
 	do{
 		printf("\n	Digite a quantidade de lugares disponiveis no onibus: "); scanf("%d", &lugares); 
 	  } while (lugares <= 0);
 	do{
-		printf("\n	Digite o custo minimo: "); scanf("%f", &cmin); 
+		printf("\n	Digite o custo minimo por pessoa: "); scanf("%f", &cmin); 
 	  } while (cmin <= 0);
 	while(cont <= lugares)
 	{
@@ -130,10 +131,10 @@ int main()
 			cont = cont + 1;
 			pt = pa + pb + pc + pd; 
 	} 
-	printf("\n	O total arrecadado entre pessoas com menos de 7 anos eh: %.2f", pa);	
-	printf("\n	O total arrecadado de pessoas entre 7 e 12 anos eh: %.2f", pb);
-	printf("\n	O total arrecadado de pessoas ente 12 e 17 anos eh: %.2f", pc);
-	printf("\n	O total arrecadado de pessoas com mais de 17 anos eh: %.2f", pd);
+	printf("\n\n\t	- Total arrecadado por faixa etaria -\n\n \tMenos de 7 anos: %.2f", pa);	
+	printf("\n	Entre 7 e 12 anos: %.2f", pb);
+	printf("\n	Entre 12 e 17 anos: %.2f", pc);
+	printf("\n	Com mais de 17 anos: %.2f", pd);
 	printf("\n\n	O valor total arrecadado eh de: %.2f\n\n", pt); 
 }*/
 
