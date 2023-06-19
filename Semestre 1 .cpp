@@ -21,7 +21,7 @@ int main()
 
 
 //	2.	Calculadora simples
-/*{
+{
 	float n1, n2, resultado;
 	int op, fim = 1;
 	printf("\n\t\tBem vindo a minha calculadora simples!\n");
@@ -41,7 +41,7 @@ int main()
 		printf("\n\n	Quer fazer mais uma conta?\n\nDigite 1 para sim\nDigite 2 para nao: "); scanf ("%i", &fim);
 	}
 	printf("\n\n");
-}*/
+}
 
 
 //	3.	Situações de alunos
