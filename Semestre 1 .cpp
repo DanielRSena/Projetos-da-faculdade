@@ -45,7 +45,7 @@ int main()
 
 
 //	3.	Situações de alunos
-{
+/*{
 	int cont, alunos;
 	float aulas;
 	printf("\n\t\t- Situacoes dos alunos -\n");
@@ -66,7 +66,7 @@ int main()
 			else printf("\n	Media: %.0f\n\tFrequencia: %.0f%%\n\n\t\t(reprovado)\n\n", m, p);
 			 }
 	}
-}
+}*/
 
 
 //	4.	Qtd numeros divisiveis por x entre a e b (b > a)
