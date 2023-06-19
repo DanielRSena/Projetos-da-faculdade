@@ -3,150 +3,101 @@
 int main()
 
 
-//	1.	x1 e x2 de baskara (desatualizada, sem do...while ou repetição da conta)
+//	1.	Quadrado perfeito (numero que é um produto de outro numero elevado à 2)
 /*{
-float a, b, c, d, x1, x2;
-printf("\nAgora eu vou calcular o x1 e x2 da equaï¿½ao de 2 grau para vc. Fala o 'a' primeiro: ");
-scanf("%f", &a);
-if (a == 0 ) printf("\nAi n eh equacao de 2 grau chefe, me quebrou agora");
-else
-{
-printf("\nAgora o 'b': ");
-scanf("%f", &b);
-printf("\nSo falta o 'c': ");
-scanf("%f", &c);
-d = (b * b) - (4 * a * c);
-if (d < 0) printf("\nDeixa quieto, raiz quadrada de %.2f eh moh rolo", d);
-else
-{
-	d = sqrt (d);
-	if (d == 0) 
+	float num, qua;
+	int nan;
+	printf("\n	Digite um numero para saber se eh um quadrado perfeito: "); scanf("%f", &num);
+	if (num < 0) num = num * (-1);
+	qua = sqrt (num);
+	nan = qua;
+	if (nan == qua) printf ("\n	%.2f eh um quadrado perfeito pois %.2f elevado ao quadrado eh %.2f!\n\n ", num, qua, num);
+	else printf("\n	Sinto muito, %.2f nao eh um quadrado perfeito.\n\n", num);
+}*/
+
+
+//	2.	Caixa eletronico
+/*{
+	int valor, n1, n2, n5, n10, n20, n50, n100, n200;
+	do {
+		printf("\n Qual o valor do saque? "); scanf("%i", &valor);
+  	   } while (valor <= 0);
+	n200 = valor / 200; valor = valor % 200;
+	n100 = valor / 100; valor = valor % 100;
+	n50 = valor / 50; valor = valor % 50;
+	n20 = valor / 20; valor = valor % 20;
+	n10 = valor / 10; valor = valor % 10;
+	n5 = valor / 5; valor = valor % 5;
+	n2 = valor / 2; valor = valor % 2;
+	n1 = valor / 1; valor = valor % 1;
+	printf("\n\n\t\t- Numero de notas a serem liberadas -\n\n\tNotas de 200: %i\n\tNotas de 100: %i\n\tNotas de 50: %i\n\tNotas de 20: %i\n\tNotas de 10: %i\n\tNotas de 5: %i\n\tNotas de 2: %i\n\tNotas de 1: %i\n\n ", n200, n100, n50, n20, n10, n5, n2, n1);
+}*/
+
+
+//	3.	Calculadora simples
+/*{
+	float n1, n2, resultado;
+	int op, fim = 1;
+	printf("\n\t\tBem vindo a minha calculadora simples!\n");
+	while (fim == 1)
 	{
-	x1 = - b / (2 * a);	
-	printf("\nO x1 e o x2 valem %.2f", x1);
+		printf("\n	Digite o primeiro numero: "); scanf("%f", &n1);
+		do { printf("\n	Soma = 1\n	Subtracao = 2\n	Multiplicacao = 3\n	Divisao = 4\n\n	Operando: "); scanf("%i", &op); } while (op < 1 || op > 4);
+		printf("\n	Digite o segundo numero: "); scanf("%f", &n2);
+		if (op == 1) { resultado = n1 + n2; printf("\n\n\t\t %f + %f = %f", n1, n2, resultado);}
+		else if (op == 2) {resultado = n1 - n2; printf("\n\n\t\t %f - %f = %f", n1, n2, resultado);}
+		else if (op == 3) {resultado = n1 * n2; printf("\n\n\t\t %f * %f = %f", n1, n2, resultado);}
+		else if (op == 4) 
+			{
+				if (n2 != 0) {resultado = n1 / n2; printf ("\n\n\t\t	%f / %f = %f", n1, n2, resultado);}
+				else printf("\n	Operacao inexistente, nao se divide por 0!\n");
+			}
+		printf("\n\n	Quer fazer mais uma conta?\n\nDigite 1 para sim\nDigite 2 para nao: "); scanf ("%i", &fim);
 	}
-	else
-	{
-x1 = (- b + d) / (2 * a);
-x2 = (- b - d) / (2 * a);
-printf("\n O x1 vale %.2f e o x2 vale %.2f", x1, x2);
-}}}
+	printf("\n\n");
 }*/
 
 
-//	2.	Quadrado perfeito, que é um numero que pode é um produto de outro numero elevado à 2
+//	4.	Descobrir se tres medidas formam um triangulo
 /*{
-float num, qua;
-int nan;
-printf("\nDigite um numero para saber se eh um quadrado perfeito: "); scanf("%f", &num);
-if (num < 0) num = num * (-1);
-qua = sqrt (num);
-nan = qua;
-if (nan == qua) printf ("\nBoa!! Ele eh um quadrado perfeito pois %.2f elevado ao quadrado eh %.2f! ", qua, num);
-else printf("\nSInto muito, %.2f nao eh um quadrado perfeito. ", num);
+	float a, b, c;
+	printf("\n\t\t- Programa para classificar triangulos - \n\n");	
+	do { printf("\n\tMedida do lado 1: "); scanf("%f", &a); } while (a <= 0);
+	do { printf("\n\tMedida do lado 2: "); scanf("%f", &b); } while (b <= 0);
+	do { printf("\n\tMedida do lado 3: "); scanf("%f", &c); } while (c <= 0); 
+	if(a >= b + c || c >= a + b || b >= a + c) printf ("\n	Erro! Nenhuma das medidas pode ser maior que a soma das outras duas!\n\n");
+	else if (a == b && b == c) printf("\n	Temos um triangulo equilatero! (tres lados iguais)\n\n");
+	else if (a == b && b != c) printf ("\n	Temos um triangulo isoceles! (dois lados iguais)\n\n");
+	else printf("\n	Temos um triangulo escaleno! (tres lados iguais)\n\n");
 }*/
 
 
-//	3.	Caixa eletronico
+//	5.	Situações de um aluno
 /*{
-int valor, n1, n2, n5, n10, n20, n50, n100, n200;
-printf("\nQual eh o valor para o valor patrao? ");
-scanf("%i", &valor);
-n200 = valor / 200; valor = valor % 200;
-n100 = valor / 100; valor = valor % 100;
-n50 = valor / 50; valor = valor % 50;
-n20 = valor / 20; valor = valor % 20;
-n10 = valor / 10; valor = valor % 10;
-n5 = valor / 5; valor = valor % 5;
-n2 = valor / 2; valor = valor % 2;
-n1 = valor / 1; valor = valor % 1;
-printf("\nNotas de 200 reais: %i\nNotas de 100: %i\nNotas de 50: %i\nNotas de 20: %i\nNotas de 10: %i\nNotas de 5: %i\nNotas de 2: %i\nNotas de 1: %i ", n200, n100, n50, n20, n10, n5, n2, n1);
+	int cont, alunos;
+	float aulas;
+	printf("\n\t\t- Situacoes dos alunos -\n");
+	do { printf("\n	Quantos serao os alunos analisados? "); scanf("%i", &alunos); } while (alunos <= 0);
+	do { printf("\n	Quantas aulas foram dadas durante o intervalo? "); scanf("%f", &aulas); } while (aulas < 1);
+  	for (cont = 0; cont < alunos; cont = cont + 1)
+  	{
+  		float n1 = 0, n2 = 0, m = 0, p = 0;
+		do { printf("\n\t----------------\n\n\t\tAluno %i\n\n\tAulas presentes: ", cont); scanf("%f", &p); } while (p < 0 || p > aulas);
+		p = p / aulas * 100;
+		if (p < 75) printf("\n\tFrequencia: %.0f%% (reprovado)\n\n", p);
+		else {
+			do { printf("\n	Primeira nota: "); scanf("%f", &n1); } while (n1 < 0 || n1 > 10);
+			do { printf("\n	Segunda nota: ", cont); scanf("%f", &n2); } while (n1 < 0 || n1 > 10);
+			m = (n1 + n2) / 2;
+			if (m >= 6) printf("\n	Media: %f\n\tFrequencia: %.0f%%\n\n\t\t(aprovado)\n\n", m, p);
+			else if (m >= 3) printf("\n	Media: %f\n\tFrequencia: %.0f%%\n\n\t\t(exame)\n\n", m, p);
+			else printf("\n	Media: %f\n\tFrequencia: %.0f%%\n\n\t\t(reprovado)\n\n", m, p);
+			 }
+	}
 }*/
 
 
-//	4.	Aumento do salario com base no tempo de casa
-/*{
-printf("\n	Qual eh o seu salario? "); scanf("%f", &sal);
-printf("\n	E o seu tempo de casa, em anos? "); scanf("%f", &tempo);
-if (tempo > 20) sal = sal * 1.25; //se o cara tem mais de 20 anos de empresa, o aumento eh de 25%
-if (tempo > 10 && tempo <= 20) sal = sal * 1.2; // se o cara tem + de 10 e - ou = a 20, aumento de 20%
-if (tempo >= 5 && tempo <= 10) sal = sal * 1.1; //entre 5 e 10 anos? 10%
-if (tempo < 5) sal = sal * 1.05; //menos de 5 anos? 5% de aumento
-printf("\n	Entao seu salario com aumento eh de RS %.2f reais. ", sal);//podemos seguir uma ordem diferente, e usar o else para t>20
-}*/
-
-
-//	5.	Imc
-/*{
-float h, p, imc;
-do{
-	printf("\n	Boa? vamos calcular e classificar seu IMC. Primeiro, coloque o peso: "); scanf("%f", &p);
-  } while (p <= 0);
-do{
-	printf("\n	Agora, a altura: "); scanf("%f", &h);
-	if (h < 0) printf ("\n	Entï¿½o vc nao existe?\n");
-	if (h > 0 && h <= 1.5) printf ("\n	ANAO?\n");
-	if (h > 2) printf("\n	POSTE?\n");
-  } while (h <= 0);
-imc = p / (h * h);
-if (imc < 20) printf ("\n	Seu IMC eh de %.2f, ou subnormal. Qualquer vento vc voa.\n", imc);
-else if (imc < 25) printf("\n	Seu imc eh de de %.2f, ou normal. Tudo tranquilo por enquanto, continua assim\n", imc);
-else if (imc < 30) printf ("\n	Seu IMC eh de %.2f, ou sobrepeso. Um pouco acima do normal, mas nada pra se preocupar (por enquanto)\n", imc);
-else if (imc < 35) printf("\n	Seu imc eh de de %.2f, ou obesidade leve. Talvez uns exercicios seriam interessantes\n", imc);
-else if (imc < 40) printf ("\n	Seu IMC eh de %.2f, ou obesidade moderada. talvez sua locomocao e saude nao devem estar tao legais.\n", imc);
-else printf("\n	Seu imc eh de de %.2f, ou obesidade morbida.\n", imc);
-}
-
-
-//	6.	Calculadora simples
-//{
-//float n1, n2, resultado;
-//int op;
-//printf("\n	Digite o primeiro numero: "); scanf("%f", &n1);
-//printf("\n	Digite o segundo numero: "); scanf("%f", &n2);
-//printf("\n	Soma = 1\n	Subtracao = 2\n	Multiplicacao = 3\n	Divisao = 4\n\n	Operando: "); scanf("%i", &op);
-//if (op == 1) { resultado = n1 + n2; printf("\n O resultado eh %f\n", resultado);}
-//else if (op == 2) {resultado = n1 - n2; printf("\n O resultado eh %f\n", resultado);}
-//else if (op == 3) {resultado = n1 * n2; printf("\n O resultado eh %f\n", resultado);}
-//else if (op == 4) 
-//{
-//if (n2 != 0) {resultado = n1 / n2; printf ("\n	O resultado eh %f\n", resultado);}
-//else printf("\n	Operacao inexistente, nao se divide por 0!\n");}
-//}
-
-
-//	7.	Descobrir se tres medidas formam um triangulo
-//{
-//float a, b, c;
-//printf("\n	Fala a medida do lado 1: "); scanf("%f", &a);
-//printf("\n	Fala a medida do lado 2: "); scanf("%f", &b);
-//printf("\n	Fala a medida do lado 3: "); scanf("%f", &c);
-//if(a >= b + c || c >= a + b || b >= a + c) printf ("\n	Assim nao vai, patrao\n");
-//else if (a == b && b == c) printf("\n	temos um triangulo equilatero!\n");
-//else if (a == b && b != c) printf ("\n	Temos um triangulo isoceles!\n");
-//else printf("\n	Temos um triangulo escaleno!\n");
-//}
-
-
-//	8.	Situações de um aluno
-//{
-//float qa, n1, n2, m, p;
-//const float a = 80;
-//printf("\n	Fala em quantas aulas vc foi: "); scanf("%f", &qa);
-//p = qa / a * 100;
-//if (p < 75) printf("\n	Com frequencia de %.2f%% nem tem como ter passado, man, foi mal\n", p);
-//else if (p > 100) printf("\n	Vc tah com %.2f%% de presenca. Isso eh possivel?\n", p);
-//else {
-//printf("\n	Fala a sua primeira nota: "); scanf("%f", &n1);
-//printf("\n	Fala a sua segunda nota: "); scanf("%f", &n2);
-//m = (n1 + n2) / 2;
-//if (m >= 3 && p <= 75) printf("\n	Com media %.2f e presenca de %.2f%%, talvez o exame te ajude a passar.\n", m, p);
-//else if (m >= 6 && p >= 75) printf("\n	Se livrando como sempre, neh? Com media %.2f e presenca de %.2f%% vc passou!\n", m, p);
-//else printf("\n	Com media %.2f e presenca de %.2f%%, vc vai ficar nessa classe mais um ano. Quem sabe na proxima.\n", m, p);
-//}}
-
-
-//	9.	Verificar se tres angulos podem ser de um triangulo
+//	6.	Verificar se tres angulos podem ser de um triangulo
 //{
 //float a1, a2, a3;
 //printf("\n	Fala a medida do angulo 1: "); scanf("%f", &a1);
