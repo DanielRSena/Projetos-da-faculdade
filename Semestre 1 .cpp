@@ -70,7 +70,7 @@ int main()
 
 
 //	4.	Qtd numeros divisiveis por x entre a e b (b > a)
-/*{
+{
 	int a, b, x;
 	printf("\n\t\t- Numeros divisiveis por x entre a e b (b > a) -\n\n");
 	do {
@@ -86,7 +86,7 @@ int main()
 		a = a + 1;
 	}
 	printf("\n\n");
-}*/
+}
 	
 	
 //	5.	Anos bissextos em intervalos de outros dois
