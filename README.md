@@ -16,7 +16,7 @@
 9. Vetores de salario com media e maior quantia;
 10. Números de vetores exibidos em escada.
 
-## **Semestre 2: Linguagem de Programação**, 100% *Java*:
+## **Semestre 2: Linguagem de Programação**, 100% em *Java*:
 
 1. Programa de Urna eletrônica, com alguns ajustes;
 2. Programa para notas de alunos, e alguns relatórios;
