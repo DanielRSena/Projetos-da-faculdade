@@ -2,6 +2,48 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "diversos",
+      "request": "launch",
+      "mainClass": "semestre2.diversos",
+      "projectName": "Projetos-da-faculdade_fff52346"
+    },
+    {
+      "type": "java",
+      "name": "imcMetodo",
+      "request": "launch",
+      "mainClass": "semestre2.imcMetodo",
+      "projectName": "Projetos-da-faculdade_fff52346"
+    },
+    {
+      "type": "java",
+      "name": "banco",
+      "request": "launch",
+      "mainClass": "semestre2.banco",
+      "projectName": "Projetos-da-faculdade_fff52346"
+    },
+    {
+      "type": "java",
+      "name": "agenda",
+      "request": "launch",
+      "mainClass": "semestre2.agenda",
+      "projectName": "Projetos-da-faculdade_fff52346"
+    },
+    {
+      "type": "java",
+      "name": "agendaContatos",
+      "request": "launch",
+      "mainClass": "semestre2.agendaContatos",
+      "projectName": "Projetos-da-faculdade_fff52346"
+    },
+    {
+      "type": "java",
+      "name": "agendaContatos$ex4Li8",
+      "request": "launch",
+      "mainClass": "semestre2.agendaContatos$ex4Li8",
+      "projectName": "Projetos-da-faculdade_fff52346"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
