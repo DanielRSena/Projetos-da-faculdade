@@ -64,5 +64,4 @@ public class Invoice {
     public void setPreçoUn(double novoPreço) {
         this.precoUnitario = novoPreço;
     }
-
 }

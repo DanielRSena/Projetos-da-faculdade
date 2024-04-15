@@ -1,0 +1,208 @@
+  /*1.  Configurações gerais*/
+
+body {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  line-height: 24px;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.add_body, .livros_body, .background-section  {
+  align-items: center;
+  background-size: cover;
+  justify-content: center;
+  background-position: center;
+  background-image: url('background/estante.jpeg');
+}
+
+a { text-decoration: none; }
+
+a:hover, .logo a:hover { color: #A6281C; }
+
+
+  /*2.  Menu de navegação*/
+
+nav {
+  display: flex;
+  background-color: black;
+  justify-content: space-around;
+}
+
+nav ul {
+  padding: 0px;
+  list-style: none;
+}
+
+nav ul li { display: inline-block; }
+
+nav ul li a {
+  width: 5em;
+  padding: 25px;
+  display: flex;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  justify-content: space-around;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a { color: white; }
+
+
+  /*2.1  Responsividade simples do menu*/
+
+@media (max-width: 520px) {
+  a { width: 4em; }
+  .wordLogo { display: none; }
+}
+
+
+  /*3.  index.php*/
+
+.index_body {
+  display: flex;
+  height: 100vh;
+}
+
+#section1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#section2 {
+  width: 100%;
+  margin-top: 0px;
+}
+
+#section3 {
+  width: 100%;
+  display: flex;
+  margin-top: 0px;
+  flex-direction: row-reverse;
+  justify-content: space-between; 
+}
+
+
+  /*4.  adicionar.php*/
+
+.add_body { background-color: black; }
+
+.add_background-section {
+  display: flex;
+  padding: 20px; 
+  border-radius: 10px; 
+  background-color: black;
+}
+
+.add_half-height {
+  flex: 1;
+  text-align: center;
+}
+
+form label span {
+  width: 70px;
+  padding: 5px 12px;
+  margin-right: 8px; 
+  border-radius: 5px;
+  display: inline-block;
+  background-color: black;
+  border: 1px solid white;
+}
+
+.ano {
+  width: 169px;
+}
+
+select{
+  width: 177px;
+  height: 21px;
+}
+
+.half-height {
+  flex: 1;
+  padding: 5%;
+  display: flex;
+  height: 100vh;
+  color: white; 
+  align-items: center;
+  text-align: justify;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+}
+
+.button-primary {
+  flex: 0 auto;
+  color: black;
+  margin-top: 8px;
+  font-size: 10px;
+  line-height: 18 px;
+  border-radius: 7px;
+  padding: 10px 22px;
+  letter-spacing: 2px;
+  flex-direction: column;
+  text-transform: uppercase;
+  background-color: white;
+}
+
+.fundopreto {
+  height: 100vh;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+}
+
+
+  /*5.  livros.php*/
+
+.conteudo {
+  padding: 2%;
+  display: grid;
+  grid-gap: 20px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 420px);
+}
+
+.box {
+  width: 420px;
+  height: 312px;
+  line-height: 16px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  justify-content: space-around;
+}
+
+.boxText {
+  height: fit-content;
+  width: 150px;
+}
+
+.boxImage {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.boxImage img {
+  width: 200px; 
+  height: 200px;
+}

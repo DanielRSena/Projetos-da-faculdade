@@ -1,31 +1,15 @@
 # Projetos da faculdade 📚
-***
- 
- Alguns  programas desenvolvidos nos meus 3 anos de análise e desenvolvimento de sistemas, os mais interessantes.
 
- ## **Semestre 1: Algoritmos e lógica de programação**, 100% em *C*:
+ Alguns  programas desenvolvidos nos meus 3 anos de análise e desenvolvimento de sistemas.
 
-1. Caixa eletrônico;
-2. Calculadora simples;
-3. Situações de n alunos;
-4. Quantidade de numeros diviseis por x entre 'a' e 'b';
-5. Anos bissextos em intervalos;
-6. Organizador de excursões;
-7. Distância entre n cidades usando vetores;
-8. Somador de vetores;
-9. Vetores de salario com media e maior quantia;
-10. Números de vetores exibidos em escada.
+ ## <a href="/semestre1"> Semestre 1</a>
+ <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white">
 
-## **Semestre 2: Linguagem de Programação**, 100% em *Java*:
+## <a href="/semestre2"> Semestre 2</a>
+ <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white">
 
-1. MDC, com método de Euclides;
-2. Urna eletrônica simples;
-3. Programa para notas de alunos e alguns relatórios;
-4. Coletor do último sobrenome;
-5. Somador de matriz;
-6. Ordenador de vetor;
-7. Agenda (manipulação de .txt); 📄
-8. Banco (manipulação de .txt); 📄
-9. Imc por métodos;
-10. Objeto/classe Invoice (introdução POO)
 
+ ## <a href="/semestre3"> Semestre 3</a>
+
+ <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"> 
+ <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white">

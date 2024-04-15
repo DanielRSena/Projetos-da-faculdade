@@ -1,4 +1,4 @@
-package semestre2;
+package semestre2.agenda;
 
 import java.io.*;
 import java.nio.file.Files;
