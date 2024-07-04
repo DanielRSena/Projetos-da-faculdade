@@ -13,10 +13,10 @@ void mostraPilha();
 
 int main(){
     topo = NULL;
-	inserePilha(5);
-	inserePilha(20);
-	inserePilha(4);
-	inserePilha(51);
+	inserePilha(13);
+	inserePilha(64);
+	inserePilha(87);
+	inserePilha(144);
 	mostraPilha();
 }
 
@@ -30,10 +30,10 @@ void inserePilha(int num){
 
 void mostraPilha(){
 	aux = topo;
+	printf("\n");
 	while(aux!=NULL) {
-		printf("\n\n\t%d", aux->chave);
-		printf("\n\n\t|");
+		printf("  %d  ->", aux->chave);
 		aux = aux->prox;	
 	}
-	printf("\n\tNULL");
+	printf("  NULL\n\n");
 }

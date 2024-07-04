@@ -1,10 +1,15 @@
 #include <stdio.h>
 #include <malloc.h>
 
-int printaVetor(int *vet, int n){
-    printf("\n\t");
+int mostrarVetor(int vet[], int n){
+
+    printf("\nVetor: ");
+
     for (int i = 0; i < n; i++) 
        printf("%d ", vet[i]);
+
+    
+    printf("\n");
     return 0;
 }
 
@@ -48,4 +53,18 @@ void freeMatriz(int **mat, int n){
     for (int i = 0; i < n; i++)
         free(mat[i]);
     free(mat);
+}
+
+void bubbleSort(int v[], int n) {
+    int i, aux;
+
+    for(i = n - 1; i >= 1; i--) {
+        for(int j = 0; j < i; j++) {
+            if(v[j] > v[j+1]) {
+                aux = v[j];
+                v[j] = v[j+1];
+                v[j+1] = aux;
+            }
+        }
+    }
 }

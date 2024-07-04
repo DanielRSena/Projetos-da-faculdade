@@ -2,12 +2,23 @@
 
 ## Estrutura de dados (C)
 
-1. BubbleSort
-2. Busca Binária
-3. Criador de uma matriz para grafos não ordenados
-4. Calculador de graus de um grafo não ordenado
-5. Pilha
-6. Biblioteca util.h para demais funções
+1. <strong> arvoreBinaria: </strong> Árvore BInária de Busca, método para navegar por estruturas
+
+2. <strong> bubbleSort: </strong> Método para ordenar vetores
+
+3. <strong> buscaBinária: </strong> Método de busca em vetores
+
+4. <strong> grafos: </strong> Criador de uma matriz para grafos não ordenados
+
+5. <strong> grausGrafos: </strong>Calculador de graus de um grafo não ordenado
+
+6. <strong> lista: </strong> Estrutura de dados que adiciona, mostra ou remove itens sem nenhuma ordem definida
+
+7. <strong> pilha: </strong> Estrutura de dados que adiciona, mostra ou remove itens no formato LIFO (Last In, First Out)
+
+8. <strong> recursividade: </strong> Técnica de programação para resolver subproblemas parecidos entre si
+
+9. <strong> util: </strong> Biblioteca com funções gerais usadas pelos programas
 
 ## Linguagem de programação IV - Internet (PHP)
 

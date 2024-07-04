@@ -5,7 +5,7 @@
 int main() {
 	
 	int v1, v2, v, i = 0;
-     char cont;
+    char cont;
 	
 	printf("\n\nQuantos vertices? "); scanf("%d", &v);
     

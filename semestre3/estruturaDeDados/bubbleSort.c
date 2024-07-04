@@ -4,30 +4,24 @@
 
 int main(){
 
-    int n, i, aux = 0;
+    int n, i;
     printf("\n\tTamanho do vetor: ");
     scanf("%d",&n);
 
     int *v = (int *) malloc (n * sizeof(int));
 
     for (i = 0; i < n; i++) {
-        printf("\n\tendereco[%d]: ", (i+1));
+        printf("\n\tendereco[%d]: ", i);
         scanf("%d", &v[i]);
     }
 
+    printf("\n\nVetor desordenado: ");
     printaVetor(v, n);
 
-    for(i = n - 1; i >= 1; i--) {
-        for(int j = 0; j < i; j++) {
-            if(v[j] > v[j+1]) {
-                aux = v[j];
-                v[j] = v[j+1];
-                v[j+1] = aux;
-            }
-        }
-    }
+    bubbleSort(v, n);
     
-    printf("\n");
+    printf("\n\nVetor ordenado: ");
     printaVetor(v, n);
+    printf("\n\n");
     free(v);
 }
