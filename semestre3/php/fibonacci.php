@@ -1,6 +1,6 @@
 <?php
 
-    echo"<h1> Sequência de FIBONACC </h1>";
+    echo"<h1> Sequência de FIBONACCI </h1>";
 
     if(isset($_GET['a']) && filter_var($_GET['a'], FILTER_VALIDATE_INT))
         $a = $_GET['a'];
